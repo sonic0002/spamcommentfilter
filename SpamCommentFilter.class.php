@@ -10,6 +10,8 @@
 /**
 * SpamCommentFilter to filter come unwanted comments which contain advertisement or illegal contents
 * 
+* Author : Pi Ke
+* 
 * Usage:
 *     
 *		$isAllowed = SpamCommentFilter::isAllowed($comment);
