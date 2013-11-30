@@ -7,16 +7,15 @@
     * This script is free software.
     */
 
-  	/**
-  	 * SpamCommentFilter to filter come unwanted comments which contain advertisement or illegal contents
-  	 * 
-  	 * Usage:
-  	 *     
-  	 *		$isAllowed = SpamCommentFilter::isAllowed($comment);
-  	 *
-  	 **/
-$root=$_SERVER["DOCUMENT_ROOT"];
-include_once($root.'/lib/external/PorterStemmer.php'); //Change stemmer class accordingly
+  /**
+   * SpamCommentFilter to filter come unwanted comments which contain advertisement or illegal contents
+   * 
+   * Usage:
+   *     
+   *		$isAllowed = SpamCommentFilter::isAllowed($comment);
+   *
+   **/
+include_once("PorterStemmer.php'); //Change stemmer class accordingly
 class SpamCommentFilter{
 	//Black list array. You can change this by storing them in an external file or database
 	public static $blacklist=array('ugg','asshole','hardcore','suck','sucks','coach','casino','sex','porn','credit','drug','drugs','pharmacy','preteen','pussy','fuck','fucking','chick','nude');
