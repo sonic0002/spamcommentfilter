@@ -8,7 +8,7 @@
 */
 
 /**
-* SpamCommentFilter to filter come unwanted comments which contain advertisement or illegal contents
+* SpamCommentFilter to filter unwanted comments which contain advertisement or illegal contents
 *
 * Author : Pi Ke
 *
@@ -62,8 +62,8 @@ class SpamCommentFilter{
          */
         public static function setBlackList($blacklist){
 	        if(is_array($blacklist)){
-				SpamCommentFilter::$blacklist=$blacklist;
-			}
+			SpamCommentFilter::$blacklist=$blacklist;
+		}
         }
 
         /*
@@ -136,15 +136,15 @@ class SpamCommentFilter{
         public static function isAllowed($data,$ignoreFlag=SpamCommentFilter::IGNORE_NONE){
         	if(($ignoreFlag&SpamCommentFilter::IGNORE_LINK)!=SpamCommentFilter::IGNORE_LINK){
         		if(SpamCommentFilter::getLinkNum($data)>SpamCommentFilter::$allowedLinkNum){
-            		return false;
-            	}
+            			return false;
+            		}
         	}
         	if(($ignoreFlag&SpamCommentFilter::IGNORE_KEYWORD)!=SpamCommentFilter::IGNORE_KEYWORD){
         		if(SpamCommentFilter::getBannedKeywordNum($data)>0){
-            		return false;
+            			return false;
            	 	}
         	}
-            return true;
+            	return true;
         }
         
         /*
