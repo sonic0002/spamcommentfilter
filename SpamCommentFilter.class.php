@@ -154,7 +154,7 @@ class SpamCommentFilter{
          * @description : Check number of links in the data
          */
         public static function getLinkNum($data=''){
-            return max(substr_count(strtolower($data),'href='),substr_count(strtolower($data),'http://'));
+            return max(substr_count(strtolower($data),'href='),substr_count(strtolower($data),'http://')+substr_count(strtolower($data),'https://'));
         }
 
         /*
